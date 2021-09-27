@@ -1,3 +1,2 @@
 #!/bin/bash
 ls -p -t |grep -v / | head
-
