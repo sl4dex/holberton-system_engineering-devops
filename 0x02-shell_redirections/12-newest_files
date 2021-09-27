@@ -1,2 +1,3 @@
 #!/bin/bash
-ls -t | find -type f | head
+ls -p -t |grep -v / | head
+
