@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -E -n "*" | grep -E "[1,3,5,7,9]" | cut -d: -f2
+grep -E -n "*" | grep -E "[13579]:" | cut -d: -f2
