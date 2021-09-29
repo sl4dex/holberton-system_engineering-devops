@@ -1,0 +1,11 @@
+root:$6$LqK9/wZ.6sAJb./h$tOzDyWURdWJPXMbviL0EJY8rHnrOo/cecxBB3gzF7EbtGmfKBx2.e8DzQzBZAKwG6u8VFEB.b3NsGjZb5tW10.:18890:0:99999:7:::
+daemon:*:18787:0:99999:7:::
+bin:*:18787:0:99999:7:::
+sys:*:18787:0:99999:7:::
+sync:*:18787:0:99999:7:::
+games:*:18787:0:99999:7:::
+man:*:18787:0:99999:7:::
+lp:*:18787:0:99999:7:::
+mail:*:18787:0:99999:7:::
+news:*:18787:0:99999:7:::
+holasdasdas
