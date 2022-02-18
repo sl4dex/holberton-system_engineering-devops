@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# displays To infinity and beyond indefinitely.
+function nokill()
+{
+    echo "I am invincible!!!"
+}
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+	trap nokill SIGTERM
+done
