@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# displays To infinity and beyond indefinitely.
+function killing()
+{
+	echo "I hate the kill command"
+	rm /var/run/myscript.pid
+	exit 0
+}
+function inting()
+{
+	echo "Y U no love me?!"
+}
+function quitting()
+{
+	rm /var/run/myscript.pid
+	exit 0
+}
+echo $$ > /var/run/myscript.pid
+trap killing SIGTERM
+trap inting SIGINT
+trap quitting SIGQUIT
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
