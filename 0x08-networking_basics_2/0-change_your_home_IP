@@ -7,6 +7,6 @@ then
 	:
 else
 	echo "hola"
-	echo -e "8.8.8.8\t\tfacebook.com" >> ~/hosts.new
+	echo -e "8.8.8.8\tfacebook.com" >> ~/hosts.new
 fi
 cp -f ~/hosts.new /etc/hosts
