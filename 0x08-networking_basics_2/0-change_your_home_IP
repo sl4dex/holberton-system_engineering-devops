@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# changes localhost and facebook.com resolve IPs
+cp /etc/hosts ~/hosts.new
+sed -i 's/127.0.0.1/127.0.0.2/' ~/hosts.new
+if grep -q "facebook.com" ~/hosts.new
+then
+	:
+else
+	echo "hola"
+	echo -e "8.8.8.8\t\tfacebook.com" >> ~/hosts.new
+fi
+cp -f ~/hosts.new /etc/hosts

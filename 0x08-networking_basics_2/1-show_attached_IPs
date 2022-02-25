@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# displays all active IPv4 IPs on the machine it’s executed on
+cp /etc/hosts ~/hosts.new
+ifconfig | grep inet | sed 's/ *i//' | cut -d" " -f2
