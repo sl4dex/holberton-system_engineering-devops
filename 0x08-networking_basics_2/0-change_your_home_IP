@@ -6,7 +6,6 @@ if grep -q "facebook.com" ~/hosts.new
 then
 	:
 else
-	echo "hola"
 	echo -e "8.8.8.8\tfacebook.com" >> ~/hosts.new
 fi
 cp -f ~/hosts.new /etc/hosts
