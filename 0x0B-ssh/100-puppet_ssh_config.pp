@@ -6,7 +6,7 @@ $str = "Host 34.74.207.217
 PasswordAuthentication no
 "
 
-file { '/root/.ssh/config':
+file { '/etc/ssh/ssh_config':
   ensure  => present,
   content => $str,
 }
