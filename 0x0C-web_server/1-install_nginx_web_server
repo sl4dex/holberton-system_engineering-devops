@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# install nginx and overwrite default index
+sudo apt-get -y install nginx;
+sudo systemctl start nginx;
+sudo echo "Hello World!" > index.nginx-debian.html
