@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """export json module"""
 import requests
-from sys import argv
 import json
+from sys import argv
 
 
 if __name__ == "__main__":
@@ -21,9 +21,9 @@ if __name__ == "__main__":
     rtodo = requests.get('https://jsonplaceholder.typicode.com/todos').json()
     for elem in rtodo:
         if elem.get("userId") == int(uid):
-            task["task"] = elem.get("title")
-            task["completed"] = elem.get("completed")
             task["username"] = username
+            task["completed"] = elem.get("completed")
+            task["task"] = elem.get("title")
             tasks.append(task)
 
     user[uid] = tasks
