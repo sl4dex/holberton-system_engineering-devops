@@ -5,7 +5,7 @@ import requests
 
 
 if __name__ == "__main__":
-    user = {}
+    alll = {}
     tasks = []
 
     rtodo = requests.get('https://jsonplaceholder.typicode.com/todos').json()
@@ -19,6 +19,7 @@ if __name__ == "__main__":
                 tasks.append({"task": elem.get("title"),
                               "completed": elem.get("completed"),
                               "username": username})
-        user[str(ide)] = tasks
+                break
+        alll[str(ide)] = tasks
     with open('todo_all_employees.json', 'a') as f:
-        json.dump(user, f)
+        json.dump(alll, f)
