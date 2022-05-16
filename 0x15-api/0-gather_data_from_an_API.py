@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """todos module"""
-from sys import argv
 import requests
+from sys import argv
+
 
 if __name__ == "__main__":
     total = done = 0
@@ -25,4 +26,4 @@ if __name__ == "__main__":
 
     print("Employee {} is done with tasks({}/{}):".format(name, done, total))
     for t in tasks:
-        print("     {}".format(t))
+        print("\t {}".format(t))
