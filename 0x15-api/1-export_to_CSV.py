@@ -19,8 +19,10 @@ if __name__ == "__main__":
     rtodo = requests.get('https://jsonplaceholder.typicode.com/todos').json()
     for elem in rtodo:
         if elem.get("userId") == int(uid):
-            with open('USER_ID.csv', 'a') as f:
+            with open(uid + '.csv', 'a') as f:
                 f.write('"{}","{}","{}","{}"'.format(
-                        uid, username, elem.get("completed"), elem.get(
-                            "title")))
+                        elem.get("userId"),
+                        username,
+                        elem.get("completed"),
+                        elem.get("title")))
                 f.write("\n")
