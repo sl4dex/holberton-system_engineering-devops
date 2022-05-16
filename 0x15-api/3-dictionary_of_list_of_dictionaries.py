@@ -14,12 +14,12 @@ if __name__ == "__main__":
         ide = u.get("id")
         username = u.get("username")
 
+        tasks.clear()
         for elem in rtodo:
             if elem.get("userId") == int(ide):
                 tasks.append({"task": elem.get("title"),
                               "completed": elem.get("completed"),
                               "username": username})
-                break
         alll[str(ide)] = tasks
     with open('todo_all_employees.json', 'a') as f:
         json.dump(alll, f)
