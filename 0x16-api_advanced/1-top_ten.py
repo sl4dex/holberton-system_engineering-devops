@@ -9,7 +9,7 @@ def top_ten(subreddit):
         f"https://www.reddit.com/r/{subreddit}/hot/.json?limit=10",
         headers={'User-Agent': 'me'})
     if hot.status_code == 404:
-        return 0
+        print("None")
     else:
         hot = hot.json()
         for child in hot['data']['children']:
